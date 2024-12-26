@@ -1,0 +1,13 @@
+{
+  "name": "workspace",
+  "version": "0.1.0",
+  "description": "Opinionated Nuxt.js template",
+  "author": "Nándor Dudás <nandor.dudas@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "bumpp": "^9.9.2"
+  }
+}
