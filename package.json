@@ -1,6 +1,6 @@
 {
   "name": "workspace",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "packageManager": "pnpm@9.15.1",
   "description": "Opinionated Nuxt.js template",
   "author": "Nándor Dudás <nandor.dudas@gmail.com>",
