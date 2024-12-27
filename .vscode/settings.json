@@ -5,7 +5,10 @@
   "cSpell.words": [
     "antfu",
     "nuxt",
-    "stroustrup"
+    "pinia",
+    "stroustrup",
+    "taze",
+    "vueuse"
   ],
   // #endregion
 
@@ -58,6 +61,65 @@
     "pcss",
     "postcss",
     "github-actions-workflow"
-  ]
+  ],
+  // #endregion
+
+  // #region vue.volar
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  // #endregion
+
+  // #region VS Code General
+  "remote.portsAttributes": {
+    /* [INFO] set PORT environment variable properly */
+    "3088": {
+      "label": "Nuxt App",
+      /**
+       * [INFO] in the ~/.nuxtrc file `devServer.https.[cert/key]` shold be set
+       *
+       * https://nuxt.com/docs/api/nuxt-config#https
+       * https://github.com/FiloSottile/mkcert#mkcert
+       */
+      "protocol": "https"
+    }
+  },
+
+  "window.title": "${dirty}${activeEditorMedium}",
+  "window.titleSeparator": " · ",
+  // #endregion
+
+  // #region antfu.goto-alias
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  // #endregion
+
+  // #region vscode.typescript-language-features
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "typescript.format.semicolons": "remove",
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  // #endregion
+
+  // #region usernamehw.errorlens
+  "errorLens.fontStyleItalic": true,
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.scrollbarHackEnabled": true
   // #endregion
 }

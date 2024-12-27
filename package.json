@@ -10,10 +10,13 @@
     "node": ">=20"
   },
   "scripts": {
-    "commitlint": "npx commitlint --config .config/commitlint.ts --edit",
+    "commitlint": "pnpm dlx commitlint --config .config/commitlint.ts --edit",
+    "dev": "pnpm --recursive dev",
     "lint:fix": "pnpm lint --fix",
     "lint": "eslint --cache --flag unstable_ts_config --config .config/eslint.ts .",
-    "postinstall": "npx simple-git-hooks"
+    "postinstall": "pnpm dlx simple-git-hooks",
+    "typecheck": "pnpm run --recursive typecheck",
+    "upgrade": "pnpm dlx taze major -iwr && SKIP_INSTALL_SIMPLE_GIT_HOOKS=1 pnpm dedupe"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
