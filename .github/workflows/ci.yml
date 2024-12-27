@@ -6,6 +6,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.sha }}
   cancel-in-progress: ${{ github.event_name != 'push' }}
 
+env:
+  SKIP_INSTALL_SIMPLE_GIT_HOOKS: 1
+
 jobs:
   commitlint:
     runs-on: ubuntu-latest
