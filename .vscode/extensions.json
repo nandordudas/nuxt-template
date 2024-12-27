@@ -6,6 +6,7 @@
     "github.vscode-github-actions",
     "streetsidesoftware.code-spell-checker",
     "usernamehw.errorlens",
-    "vue.volar"
+    "vue.volar",
+    "eamodio.gitlens"
   ]
 }
