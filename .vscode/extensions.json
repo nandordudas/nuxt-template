@@ -1,5 +1,8 @@
 {
   "recommendations": [
-    "github.vscode-github-actions"
+    "antfu.pnpm-catalog-lens",
+    "dbaeumer.vscode-eslint",
+    "github.vscode-github-actions",
+    "streetsidesoftware.code-spell-checker"
   ]
 }
