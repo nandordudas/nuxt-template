@@ -1,0 +1,6 @@
+packages:
+  - .
+  - packages/*
+catalog:
+  '@antfu/eslint-config': ^3.12.1
+  eslint: ^9.17.0
