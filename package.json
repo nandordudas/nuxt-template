@@ -5,6 +5,10 @@
   "description": "Opinionated Nuxt.js template",
   "author": "Nándor Dudás <nandor.dudas@gmail.com>",
   "license": "MIT",
+  "engineStrict": true,
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "commitlint": "npx commitlint --config .config/commitlint.ts --edit",
     "lint:fix": "pnpm lint --fix",
