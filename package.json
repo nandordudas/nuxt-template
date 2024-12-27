@@ -5,21 +5,22 @@
   "author": "Nándor Dudás <nandor.dudas@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "commitlint": "npx commitlint --config .config/commitlint.ts --edit",
     "lint:fix": "pnpm lint --fix",
     "lint": "eslint --cache --flag unstable_ts_config --config .config/eslint.ts .",
     "postinstall": "npx simple-git-hooks"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
-    "@commitlint/config-conventional": "^19.6.0",
-    "@commitlint/prompt-cli": "^19.6.1",
+    "@commitlint/config-conventional": "catalog:",
+    "@commitlint/prompt-cli": "catalog:",
+    "conventional-changelog-atom": "catalog:",
     "eslint": "catalog:",
-    "execa": "^9.5.2",
-    "lint-staged": "^15.2.11",
-    "simple-git-hooks": "^2.11.1"
+    "lint-staged": "catalog:",
+    "simple-git-hooks": "catalog:"
   },
   "simple-git-hooks": {
-    "commit-msg": "npx --no commitlint --config=.config/commitlint.ts --edit ${1}",
+    "commit-msg": "pnpm commitlint ${1}",
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {

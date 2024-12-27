@@ -7,6 +7,6 @@ export default {
   parserPreset: 'conventional-changelog-atom',
   formatter: '@commitlint/format',
   rules: {
-    'type-enum': [2, 'always', ['foo']],
+    // [TODO] https://commitlint.js.org/reference/rules.html
   },
 } satisfies UserConfig
