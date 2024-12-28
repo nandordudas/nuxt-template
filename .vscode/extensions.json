@@ -3,10 +3,12 @@
     "antfu.goto-alias",
     "antfu.pnpm-catalog-lens",
     "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
     "github.vscode-github-actions",
+    "orta.vscode-twoslash-queries",
     "streetsidesoftware.code-spell-checker",
     "usernamehw.errorlens",
     "vue.volar",
-    "eamodio.gitlens"
+    "yoavbls.pretty-ts-errors"
   ]
 }

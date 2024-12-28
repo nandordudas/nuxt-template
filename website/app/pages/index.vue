@@ -10,6 +10,9 @@ useHead({
 })
 
 const appStore = useAppStore()
+const { isLoading } = useLoadingState<any, Error>({
+  name: appStore.state.name,
+})
 </script>
 
 <template>
@@ -19,7 +22,7 @@ const appStore = useAppStore()
         <article>
           <Centered>
             <h1 style="order: 2; width: max-content; margin-inline: auto; padding: 1rem" class="bg-tomato-ish">
-              {{ $route.name }}
+              {{ $route.name }} - isLoading: {{ isLoading }}
             </h1>
           </Centered>
 
