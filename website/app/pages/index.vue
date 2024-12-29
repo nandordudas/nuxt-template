@@ -10,7 +10,7 @@ useHead({
 })
 
 const appStore = useAppStore()
-const { isLoading } = useLoadingState<any, Error>({
+const { isLoading } = useLoadingState({
   name: appStore.state.name,
 })
 </script>

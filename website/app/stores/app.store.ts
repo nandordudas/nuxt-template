@@ -1,6 +1,5 @@
 import { consola } from 'consola'
 import { StoreNames } from '~/shared/constants/store.constants'
-import { isSuccess } from '~/utils/loading/core'
 
 export interface AppState {
   name: string
