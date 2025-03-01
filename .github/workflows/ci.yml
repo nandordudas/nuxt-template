@@ -18,11 +18,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      - run: corepack enable
+
       - name: Set node
         uses: actions/setup-node@v4
         with:
           cache: pnpm
-          node-version: latest
+          node-version: lts/*
 
       - name: Install commitlint
         run: pnpm install -w conventional-changelog-conventionalcommits commitlint@latest
