@@ -1,8 +1,15 @@
 <script lang="ts">
+import type { NuxtError } from '#app'
 import { en } from '@nuxt/ui/locale'
+
+interface ErrorPageProps {
+  error: NuxtError
+}
 </script>
 
 <script setup lang="ts">
+defineProps<ErrorPageProps>()
+
 const lang = computed(() => en.code)
 const dir = computed(() => en.dir)
 
@@ -13,13 +20,6 @@ useHead({
 
 <template>
   <UApp :locale="en">
-    <NuxtRouteAnnouncer />
-    <NuxtLoadingIndicator />
-
-    <UMain>
-      <NuxtLayout>
-        <NuxtPage :page-key="route => route.fullPath" />
-      </NuxtLayout>
-    </UMain>
+    <UError :error />
   </UApp>
 </template>

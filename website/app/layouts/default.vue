@@ -1,11 +1,11 @@
-<script  setup lang="ts">
+<script setup lang="ts">
 defineOptions({
   inheritAttrs: false,
 })
 </script>
 
 <template>
-  <main>
+  <UContainer as="main">
     <slot />
-  </main>
+  </UContainer>
 </template>

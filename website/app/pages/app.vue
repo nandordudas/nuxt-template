@@ -1,18 +1,21 @@
 <script setup lang="ts">
 definePageMeta({
-  name: 'home',
+  name: 'app',
   layout: 'default',
 })
 
 useHead({
-  title: 'Home',
+  title: 'App',
 })
+
+const appStore = useAppStore()
+const { state } = storeToRefs(appStore)
 </script>
 
 <template>
   <UPage>
     <UPageBody>
-      {{ $route.name }}
+      <h1>{{ state.routeName }}</h1>
     </UPageBody>
   </UPage>
 </template>

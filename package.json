@@ -1,7 +1,7 @@
 {
   "name": "workspace",
-  "version": "0.5.0",
-  "packageManager": "pnpm@9.15.1",
+  "version": "0.6.0",
+  "packageManager": "pnpm@10.5.2",
   "description": "Opinionated Nuxt.js template",
   "author": "Nándor Dudás <nandor.dudas@gmail.com>",
   "license": "MIT",
@@ -13,10 +13,10 @@
     "commitlint": "pnpm dlx commitlint --config .config/commitlint.ts --edit",
     "dev": "pnpm --recursive dev",
     "lint:fix": "pnpm lint --fix",
-    "lint": "eslint --cache --flag unstable_ts_config --config .config/eslint.ts .",
-    "postinstall": "pnpm dlx simple-git-hooks",
+    "lint": "eslint --cache --config .config/eslint.ts .",
+    "postinstall": "npx simple-git-hooks",
     "typecheck": "pnpm run --recursive typecheck",
-    "upgrade": "pnpm dlx taze major -iwr && SKIP_INSTALL_SIMPLE_GIT_HOOKS=1 pnpm dedupe"
+    "upgrade": "npx taze major -iwr && SKIP_INSTALL_SIMPLE_GIT_HOOKS=1 pnpm dedupe"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
@@ -24,6 +24,7 @@
     "@commitlint/prompt-cli": "catalog:",
     "conventional-changelog-atom": "catalog:",
     "eslint": "catalog:",
+    "eslint-plugin-format": "catalog:",
     "lint-staged": "catalog:",
     "simple-git-hooks": "catalog:"
   },

@@ -1,10 +1,10 @@
 declare module 'nuxt/schema' {
   interface RuntimeConfig {
-    //
+    /* [TODO] */
   }
 
   interface PublicRuntimeConfig {
-    packageVersion: string
+    /* [TODO] */
   }
 }
 

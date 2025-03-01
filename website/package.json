@@ -1,7 +1,7 @@
 {
   "name": "@workspace/website",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Opinionated Nuxt.js template package for workspace",
   "scripts": {
@@ -9,20 +9,20 @@
     "cleanup": "nuxt cleanup",
     "dev": "nuxt dev --dotenv .env.local",
     "generate": "nuxt generate",
-    "postinstall": "nuxt prepare",
+    "postinstall": "nuxt prepare; [ -f .env.local ] || cp .env.example .env.local",
     "preview": "nuxt preview",
     "typecheck": "nuxt typecheck",
     "upgrade": "nuxt upgrade"
   },
   "dependencies": {
-    "@pinia/nuxt": "catalog:",
-    "@vueuse/nuxt": "catalog:",
+    "@iconify-json/lucide": "^1.2.27",
+    "@nuxt/ui-pro": "3.0.0-beta.2",
     "nuxt": "catalog:",
-    "pinia": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"
   },
   "devDependencies": {
+    "@pinia/nuxt": "catalog:",
     "vue-tsc": "catalog:"
   }
 }
