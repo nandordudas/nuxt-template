@@ -6,7 +6,10 @@ export function raiseError(
   cause?: unknown,
 ): never {
   if (typeof message !== 'string')
-    throw new TypeError('Parameter `message` must be a string')
+    throw new TypeError('Message must be a string.')
+
+  if (!(ErrorConstructor.prototype instanceof Error))
+    throw new TypeError('ErrorConstructor must be a subclass of Error.')
 
   throw new ErrorConstructor(message, { cause })
 }
@@ -19,9 +22,9 @@ export function isFunction(value: unknown): value is CallableFunction {
   return typeof value === 'function'
 }
 
-export function assertFunction(value: unknown): asserts value is CallableFunction {
+export function ensureFunction(value: unknown): asserts value is CallableFunction {
   if (!isFunction(value))
-    raiseError('Expected a function')
+    raiseError('Expected a function but received a non-function value.')
 }
 
 /*  */
@@ -195,14 +198,15 @@ export function tryCatch<T, E extends Error>(
 
 export function tryCatch<T, E extends Error>(
   fn: AnyFunction<T>,
-  options: ResultErrorOptions = {},
+  options: ResultErrorOptions = { transformError: defaultTransformError },
 ): TryCatchReturn<AnyFunction<T>, E> {
-  assertFunction(fn)
+  ensureFunction(fn)
 
   function handleFailure(error: unknown): Failure<Error> {
-    const transformError = options.transformError || defaultTransformError
+    if (options.transformError)
+      return createFailure(options.transformError(error))
 
-    return createFailure(transformError(error))
+    return createFailure(defaultTransformError(error))
   }
 
   try {
