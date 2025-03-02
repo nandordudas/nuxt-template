@@ -1,25 +1,14 @@
-<script lang="ts">
-import { en } from '@nuxt/ui/locale'
-</script>
-
 <script setup lang="ts">
-const lang = computed(() => en.code)
-const dir = computed(() => en.dir)
-
-useHead({
-  htmlAttrs: { dir, lang },
-})
+const { locale } = useHeadCommon()
 </script>
 
 <template>
-  <UApp :locale="en">
+  <UApp :locale>
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator />
 
-    <UMain>
-      <NuxtLayout>
-        <NuxtPage :page-key="route => route.fullPath" />
-      </NuxtLayout>
-    </UMain>
+    <NuxtLayout>
+      <NuxtPage :page-key="route => route.fullPath" />
+    </NuxtLayout>
   </UApp>
 </template>

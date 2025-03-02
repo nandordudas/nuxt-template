@@ -5,7 +5,7 @@ defineOptions({
 </script>
 
 <template>
-  <UContainer as="main">
+  <UMain>
     <slot />
-  </UContainer>
+  </UMain>
 </template>

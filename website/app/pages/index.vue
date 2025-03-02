@@ -10,9 +10,5 @@ useHead({
 </script>
 
 <template>
-  <UPage>
-    <UPageBody>
-      {{ $route.name }}
-    </UPageBody>
-  </UPage>
+  <UPageHero :title="$route.name" />
 </template>

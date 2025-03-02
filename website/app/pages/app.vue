@@ -13,9 +13,5 @@ const { state } = storeToRefs(appStore)
 </script>
 
 <template>
-  <UPage>
-    <UPageBody>
-      <h1>{{ state.routeName }}</h1>
-    </UPageBody>
-  </UPage>
+  <UPageHero :title="state.routeName" />
 </template>

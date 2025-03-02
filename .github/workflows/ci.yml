@@ -18,6 +18,7 @@ jobs:
         with:
           fetch-depth: 0
 
+      # https://vercel.com/guides/corepack-errors-github-actions
       - run: npm install -g corepack@latest && corepack enable
 
       - name: Set node

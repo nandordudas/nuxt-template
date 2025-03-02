@@ -26,11 +26,5 @@ export default defineNuxtConfig({
       },
       worker: { format: 'es' },
     },
-    app: {
-      head: {
-        templateParams: { environment: '🔥' },
-        titleTemplate: '%environment %s %separator %siteName',
-      },
-    },
   },
 })
