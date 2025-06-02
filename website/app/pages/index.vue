@@ -10,5 +10,5 @@ useHead({
 </script>
 
 <template>
-  <UPageHero :title="$route.name" />
+  <UPageHero :title="$route.name?.toString()" />
 </template>

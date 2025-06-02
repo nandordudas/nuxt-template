@@ -8,12 +8,10 @@ interface ErrorPageProps {
 
 <script setup lang="ts">
 defineProps<ErrorPageProps>()
-
-const { locale } = useHeadCommon()
 </script>
 
 <template>
-  <UApp :locale>
+  <UApp>
     <UError :error />
   </UApp>
 </template>

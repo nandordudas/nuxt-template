@@ -2,6 +2,7 @@
   "recommendations": [
     "antfu.goto-alias",
     "antfu.pnpm-catalog-lens",
+    "bradlc.vscode-tailwindcss",
     "dbaeumer.vscode-eslint",
     "eamodio.gitlens",
     "github.vscode-github-actions",

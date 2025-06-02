@@ -26,4 +26,4 @@ export declare namespace TryCatch {
   type Result<T, E extends Error> = Success<T> | Failure<E>
 }
 
-export { }
+export {}

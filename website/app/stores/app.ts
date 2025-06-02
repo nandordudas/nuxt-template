@@ -1,12 +1,12 @@
 export interface AppState {
-  routeName: string
+  routeName: string | undefined
 }
 
 export const useAppStore = defineStore('app', () => {
   const route = useRoute()
 
   const state = reactive<AppState>({
-    routeName: route.name,
+    routeName: route.name?.toString(),
   })
 
   return {

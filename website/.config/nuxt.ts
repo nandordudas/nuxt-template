@@ -1,8 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
-  devtools: { enabled: false },
-  experimental: { inlineRouteRules: true, typedPages: true },
+  devtools: { enabled: true },
+  experimental: { inlineRouteRules: true, typedPages: true, viewTransition: true },
   future: { compatibilityVersion: 4 },
   router: { options: { strict: true } },
   app: {

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const { locale } = useHeadCommon()
+//
 </script>
 
 <template>
-  <UApp :locale>
+  <UApp>
     <NuxtRouteAnnouncer />
-    <NuxtLoadingIndicator />
+    <NuxtLoadingIndicator color="var(--ui-primary)" />
 
     <NuxtLayout>
       <NuxtPage :page-key="route => route.fullPath" />
